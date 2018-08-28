@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type = "global.sesoc.shop.vo.Member" alias = "Member" />
+		<typeAlias type = "global.sesoc.shop.vo.Book" alias = "Book" />
+		<typeAlias type = "global.sesoc.shop.vo.Order" alias = "Order" />
+		<typeAlias type = "global.sesoc.shop.vo.Sale" alias = "Sale" />
+		<typeAlias type = "global.sesoc.shop.vo.Wish" alias = "Wish" />
+		<typeAlias type = "global.sesoc.shop.vo.BestSellers" alias = "BestSellers" />
+		<typeAlias type = "global.sesoc.shop.vo.ChatUsers" alias = "ChatUsers" />
+		<typeAlias type = "global.sesoc.shop.vo.ChatRoom" alias = "ChatRoom" />
+	</typeAliases>
+
+ 	<mappers>
+ 		<mapper resource="mappers/memberMapper.xml"></mapper>
+ 		<mapper resource="mappers/chatMapper.xml"></mapper>
+ 		<mapper resource="mappers/productMapper.xml"></mapper>
+ 	</mappers>
+</configuration>
