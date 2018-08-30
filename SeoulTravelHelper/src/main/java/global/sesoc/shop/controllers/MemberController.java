@@ -23,10 +23,23 @@ public class MemberController {
 	   @Autowired
 	   MemberRepository repository;
 	   
-	   @RequestMapping(value="/join", method=RequestMethod.GET)
-	   public String join() {
-	      return "member/joinForm";
+	   @RequestMapping(value="/Login", method=RequestMethod.GET)
+	   public String Login() {
+	      return "Login";
 	   }
+	   
+	   @RequestMapping(value="/Join", method=RequestMethod.GET)
+	   public String Join() {
+	      return "Join";
+	   }
+	   
+	   @RequestMapping(value="/MyPage", method=RequestMethod.GET)
+	   public String MyPage() {
+	      return "MyPage";
+	   }
+	   
+	   
+	   
 	   
 	   @RequestMapping(value="/join", method=RequestMethod.POST)
 	   public String join(Member member) {

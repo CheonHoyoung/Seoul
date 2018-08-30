@@ -33,7 +33,13 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "index";
+		return "Home";
+	}
+	
+	@RequestMapping(value = "/Home", method = RequestMethod.GET)
+	public String index() {
+		
+		return "Home";
 	}
 	
 }

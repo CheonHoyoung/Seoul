@@ -386,6 +386,7 @@ function doSearch(){
 
 </head>
 <body>
+
 <div class="map_wrap">
     <div id="map" style="width:100%;height:700px;position:relative;overflow:hidden;"></div>
 
