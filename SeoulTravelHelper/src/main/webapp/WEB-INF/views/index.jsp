@@ -12,7 +12,7 @@
 	<c:choose>
 		<c:when test="${sessionScope.loginId==null}">
 			<ul>
-				<li><a href="join"><h3>회원가입</h3></a></li>
+				<li><a href="join"><h3>회원가입11111</h3></a></li>
 				<li><a href="login"><h3>로그인</h3></a></li>
 				<li><a href="list"><h3>상품목록</h3></a></li>
 				<li><a href="best"><h3>베스트셀러</h3></a></li>
