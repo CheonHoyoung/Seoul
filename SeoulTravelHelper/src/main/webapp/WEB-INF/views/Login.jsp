@@ -376,13 +376,14 @@ input[type=text]:placeholder {
 		    </div>
 		
 		    <!-- Login Form -->
-		    <form>
-		      <input type="text" id="userId" class="fadeIn second" name="userId" placeholder="ID">
-		      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+		    <form action="login" method="post">
+		      <input type="text" id="userId" class="fadeIn second" placeholder="ID" name="userid">
+		      <input type="password" id="password" class="fadeIn third" placeholder="password" name="userpwd">
 		      <input type="submit" class="fadeIn fourth" value="Log In">
 		    </form>
 		
 			<div id="formFooter">
+				<label id="msg"> ${message} </label>>
       			<label>Not a member?<a class="underlineHover" href="Join" style="color: #facc00;">&nbsp;Sign up now</a></label>
     		</div>
 			

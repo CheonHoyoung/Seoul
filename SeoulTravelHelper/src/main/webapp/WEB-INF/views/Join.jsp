@@ -375,12 +375,12 @@ input[type=text]:placeholder {
 		    </div>
 		
 		    <!-- Login Form -->
-		    <form>
-		      <input type="text" id="userId" class="fadeIn second" name="userId" placeholder="ID">
-		      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-		      <input type="text" id="userName" class="fadeIn third" name="userName" placeholder="name">
-		      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
-		      <input type="text" id="phone" class="fadeIn third" name="phone" placeholder="phone number">
+		    <form action="join" method="post">
+		      <input type="text" id="userId" class="fadeIn second"  placeholder="ID" name="userid">
+		      <input type="password" id="password" class="fadeIn third" placeholder="password" name="userpwd">
+		      <input type="text" id="userName" class="fadeIn third" placeholder="name" name="username">
+		      <input type="text" id="email" class="fadeIn third" placeholder="email" name="email">
+		      <input type="text" id="phone" class="fadeIn third" placeholder="phone number" name="phone">
 		      <input type="submit" class="fadeIn fourth" value="Join">
 		    </form>
 		    

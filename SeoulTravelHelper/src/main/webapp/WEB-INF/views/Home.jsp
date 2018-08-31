@@ -10,6 +10,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Pink-Donut One Page Template</title>
+        
+        <style type="text/css">
+        #name{
+         padding-top: 10px;
+    	 padding-bottom: 10px;
+  	 	 line-height: 20px;
+   		 font-family: 'johnregular';
+   		 font-size: 18px;
+        }
+        </style>
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -70,12 +81,14 @@
                                         
                                         <ul class="nav navbar-nav navbar-right">
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId == null }">
                                             <li><a href="Login">Login</a></li>
                                             </c:if>
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId != null }">
+                                            <li id="name">${sessionScope.loginName},</li>
                                              <li><a href="MyPage">My Page</a></li>
+                                            <li><a href="logout">Logout</a></li>
                                             </c:if>
                                             
                                         </ul>
