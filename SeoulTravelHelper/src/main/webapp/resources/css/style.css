@@ -67,6 +67,7 @@ a:focus {
 }
 a,
 button,
+input,
 a span {
     -webkit-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;

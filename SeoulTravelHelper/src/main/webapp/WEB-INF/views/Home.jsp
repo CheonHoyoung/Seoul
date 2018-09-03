@@ -19,6 +19,7 @@
    		 font-family: 'johnregular';
    		 font-size: 18px;
         }
+
         </style>
         
         <meta name="description" content="">
@@ -199,25 +200,25 @@
                             
                             <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="2s">
 								<div class="contact_message">
-									<form action="#" id="formid">
+									<form action="contactAction" name="contactForm" method="post">
 										<label for="">Name</label>
 										<div class="form-group">
-											<input type="text" class="form-control" name="name" placeholder="name" required="">
+											<input type="text" class="form-control" name="contactName" placeholder="name" required="">
 										</div>
 										
 										<label for="">Email</label>
 										<div class="form-group">
-											<input type="email" class="form-control" name="email" placeholder="Email" required="">
+											<input type="email" class="form-control" name="contactMail" placeholder="Email" required="">
 										</div>
 
 										<label for="">Message</label>
 										<div class="form-group">
-											<textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
+											<textarea class="form-control" name="contactMessage" rows="8" placeholder="Message"></textarea>
 										</div>
 
 										<div class="message_btn text-center">
 											<div class="btn_bg">
-												<a href="" class="btn">Send</a>
+												<a class="btn" onclick="contactCheck()">Send</a>
 											</div>
 										</div>
 									</form>
@@ -314,6 +315,15 @@
             
         <script src="resources/js/plugins.js"></script>
         <script src="resources/js/main.js"></script>
+        
+        <script type="text/javascript">
+
+        function contactCheck(){
+        	document.contactForm.submit();
+        }
+        
+        
+        </script>
         
     </body>
 </html>

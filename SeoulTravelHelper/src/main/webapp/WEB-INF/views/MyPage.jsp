@@ -283,6 +283,15 @@
 		* {
 		  box-sizing: border-box;
 		}
+
+        #name{
+         padding-top: 10px;
+    	 padding-bottom: 10px;
+  	 	 line-height: 20px;
+   		 font-family: 'johnregular';
+   		 font-size: 18px;
+        }
+
         </style>
         
         <meta name="description" content="">
@@ -343,14 +352,16 @@
                                             <li><a href="Board">Board</a></li>
                                         </ul>
                                         
-                                        <ul class="nav navbar-nav navbar-right">
+                                          <ul class="nav navbar-nav navbar-right">
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId == null }">
                                             <li><a href="Login">Login</a></li>
                                             </c:if>
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId != null }">
+                                            <li id="name">${sessionScope.loginName},</li>
                                              <li><a href="MyPage">My Page</a></li>
+                                            <li><a href="logout">Logout</a></li>
                                             </c:if>
                                             
                                         </ul>
@@ -373,24 +384,24 @@
 		  
 		    <!-- Tabs Titles -->
 		<div class="w3-bar w3-black">
-		  <button class="w3-bar-item w3-button" onclick="openCity('London')">My Page</button>
-		  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Friends</button>
-		  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Calendar</button>
+		  <button class="w3-bar-item w3-button" onclick="openCity('London')">Friends</button>
+		  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Message</button>
+		  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Chatting</button>
 		</div>
 		
 		<div id="London" class="w3-container city">
-		  <h2>My Page</h2>
-		  <p>London is the capital city of England.</p>
+		  <h2>Friends</h2>>
+		  <p>친구 목록 추가 등 관리</p>
 		</div>
 		
 		<div id="Paris" class="w3-container city" style="display:none">
-		  <h2>Friends</h2>
-		  <p>Paris is the capital of France.</p> 
+		  <h2>Message</h2>
+		  <p>쪽지 주고받기</p> 
 		</div>
 		
 		<div id="Tokyo" class="w3-container city" style="display:none">
-		  <h2>Calendar</h2>
-		  <p>Tokyo is the capital of Japan.</p>
+		  <h2>Chatting</h2>
+		  <p>채팅</p>
 		</div>
 	
 		  </div>

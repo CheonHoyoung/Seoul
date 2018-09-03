@@ -279,6 +279,14 @@ input[type=text]:placeholder {
 * {
   box-sizing: border-box;
 }
+
+   #name{
+    padding-top: 10px;
+	 padding-bottom: 10px;
+ 	line-height: 20px;
+	 font-family: 'johnregular';
+	 font-size: 18px;
+   }
         </style>
         
         <meta name="description" content="">
@@ -339,14 +347,16 @@ input[type=text]:placeholder {
                                             <li><a href="Board">Board</a></li>
                                         </ul>
                                         
-                                        <ul class="nav navbar-nav navbar-right">
+                                          <ul class="nav navbar-nav navbar-right">
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId == null }">
                                             <li><a href="Login">Login</a></li>
                                             </c:if>
                                             
-                                            <c:if test="${sessionScope.loginid == null }">
+                                            <c:if test="${sessionScope.loginId != null }">
+                                            <li id="name">${sessionScope.loginName},</li>
                                              <li><a href="MyPage">My Page</a></li>
+                                            <li><a href="logout">Logout</a></li>
                                             </c:if>
                                             
                                         </ul>
