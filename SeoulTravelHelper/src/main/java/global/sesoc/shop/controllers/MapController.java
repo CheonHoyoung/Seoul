@@ -36,9 +36,10 @@ public class MapController {
 	@Autowired
 	ProductRepository repository;
 
-	@RequestMapping(value = "/map", method = RequestMethod.GET)
-	public String map() {
-		return "map/NewFile3";
+	@RequestMapping(value = "/Socar", method = RequestMethod.GET)
+	public String Socar() {
+		
+		return "map/NewFile2";
 	}
 	
 	@RequestMapping(value = "/reserve", method = RequestMethod.GET)

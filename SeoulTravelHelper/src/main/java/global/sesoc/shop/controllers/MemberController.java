@@ -23,9 +23,19 @@ public class MemberController {
 	   @Autowired
 	   MemberRepository repository;
 	   
-	   @RequestMapping(value="/join", method=RequestMethod.GET)
-	   public String join() {
-	      return "member/joinForm";
+	   @RequestMapping(value="/Login", method=RequestMethod.GET)
+	   public String Login() {
+	      return "Login";
+	   }
+	   
+	   @RequestMapping(value="/Join", method=RequestMethod.GET)
+	   public String Join() {
+	      return "Join";
+	   }
+	   
+	   @RequestMapping(value="/MyPage", method=RequestMethod.GET)
+	   public String MyPage() {
+	      return "MyPage";
 	   }
 	   
 	   @RequestMapping(value="/join", method=RequestMethod.POST)
@@ -33,14 +43,9 @@ public class MemberController {
 		  logger.info("member : {}", member.toString());
 	      int result = repository.join(member);
 	      if(result==0) {
-	    	  return "member/joinForm";
+	    	  return "Join";
 	      }
 	      return "redirect:/";
-	   }
-	   
-	   @RequestMapping(value="/login", method=RequestMethod.GET)
-	   public String login() {
-		   return "member/loginForm";
 	   }
 	   
 	   @RequestMapping(value="/login", method=RequestMethod.POST)
@@ -56,7 +61,7 @@ public class MemberController {
 			   return "redirect:/";
 		   } else {
 			   model.addAttribute("message", "해당 아이디나 비밀번호가 존재하지 않습니다.");
-			   return "member/loginForm";
+			   return "Login";
 		   }
 	   }
 	   

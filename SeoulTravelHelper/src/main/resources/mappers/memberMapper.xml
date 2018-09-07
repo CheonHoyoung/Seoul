@@ -7,18 +7,14 @@
 
 	<!-- 회원가입 -->
 	<insert id="insert" parameterType="Member">
-		INSERT INTO SHOPMEMBER
+		INSERT INTO 
+		MEMBER
+		VALUES
 		(
-			USERID 
-			,PASSWORD 
-			,USERNAME
-			,ADDRESS
-			,PHONE
-		) VALUES(
 			#{userid}
-			,#{password}
+			,#{userpwd}
 			,#{username}
-			,#{address}
+			,#{email}
 			,#{phone}
 		)
 	</insert >
@@ -39,13 +35,13 @@
 	<!-- 로그인, 아이디 중복확인 -->
 		<select id="loginMember" parameterType="Member" resultType="Member">
 		SELECT USERID 
-			,PASSWORD 
+			,USERPWD
 			,USERNAME
-			,ADDRESS
+			,EMAIL
 			,PHONE
-		  FROM SHOPMEMBER
+		  FROM MEMBER
 		 WHERE USERID   = #{userid}
-		   AND PASSWORD = #{password}
+		   AND USERPWD = #{userpwd}
 	</select>
 	
 </mapper>
